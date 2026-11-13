@@ -1,9 +1,11 @@
 
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Wind Tunnel Lab</title>
-
   <style>
     body {
       background: #101820;
@@ -11,11 +13,7 @@
       font-family: Arial;
       text-align: center;
     }
-
-    h1 {
-      color: #42c8ff;
-    }
-
+    h1 { color: #42c8ff; }
     button {
       padding: 12px;
       background: #168bd2;
@@ -23,7 +21,6 @@
       border: none;
       border-radius: 8px;
     }
-
     canvas {
       background: #eaf5ff;
       border-radius: 10px;
@@ -31,41 +28,25 @@
     }
   </style>
 </head>
-
 <body>
-
   <h1>WIND TUNNEL LAB</h1>
   <p>Design and test your cars!</p>
 
-  <canvas id="tunnel"
-    width="600" height="300">
-  </canvas>
-
+  <canvas id="tunnel" width="600" height="300"></canvas>
   <br><br>
-
-  <button onclick="testWind()">
-    Test Wind
-  </button>
+  <button onclick="testWind()">Test Wind</button>
 
   <script>
-    const canvas =
-      document.getElementById("tunnel");
-
+    const canvas = document.getElementById("tunnel");
     const ctx = canvas.getContext("2d");
 
     function drawCar() {
       ctx.clearRect(0, 0, 600, 300);
-
       ctx.fillStyle = "#222";
-
       ctx.fillRect(180, 160, 250, 50);
-
       ctx.fillStyle = "#168bd2";
-
       ctx.fillRect(240, 120, 120, 40);
-
       ctx.fillStyle = "#111";
-
       ctx.beginPath();
       ctx.arc(230, 215, 25, 0, Math.PI * 2);
       ctx.arc(390, 215, 25, 0, Math.PI * 2);
@@ -78,6 +59,5 @@
 
     drawCar();
   </script>
-
 </body>
 </html>
